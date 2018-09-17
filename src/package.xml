@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>Application__c.Account__c</members>
+        <members>Application__c.Applicant__c</members>
+        <members>Application__c.Campsite__c</members>
+        <members>Application__c.Status__c</members>
+        <members>Reservation__c.Application__c</members>
+        <members>Reservation__c.Camper__c</members>
+        <members>Reservation__c.Description__c</members>
+        <members>Reservation__c.Campsite__c</members>
+        <members>Reservation__c.Arrival_Date__c</members>
+        <members>Reservation__c.Departure_Date__c</members>
+        <members>Reservation__c.Number_of_Campers__c</members>
+        <members>Campsite__c.Description__c</members>
+        <name>CustomField</name>
+    </types>
+    <types>
+        <members>CustomLabels</members>
+        <name>CustomLabels</name>
+    </types>
+    <types>
+        <members>Application__c</members>
+        <members>Reservation__c</members>
+        <members>Campsite__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>Application__c-Application Layout</members>
+        <members>Reservation__c-Reservation Layout</members>
+        <members>Campsite__c-Campsite Layout</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>Camper</members>
+        <name>Profile</name>
+    </types>
+    <version>43.0</version>
+</Package>

@@ -1,0 +1,30 @@
+<apex:page docType="html-5.0"
+	sidebar="false"
+	showHeader="false"
+	standardStylesheets="false"
+	applyHtmlTag="false"
+	applyBodyTag="false"
+	controller="CampsiteController">
+
+	<html lang="en" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<head>
+			<meta charset="utf-8" />
+			<meta name="viewport" content="width=device-width, initial-scale=1" />
+			<apex:slds />
+			<apex:includeScript value="{!URLFOR($Resource.jQuery)}" />
+			<apex:includeScript value="{!URLFOR($Resource.angularjs)}" />
+			<apex:includeScript value="{!URLFOR($Resource.campsites,
+				'app/campsites.module.js')}" />
+			<apex:includeScript value="{!URLFOR($Resource.campsites,
+				'providers/visualforce.provider.js')}" />
+			<apex:includeScript value="{!URLFOR($Resource.campsites,
+				'components/campsiteList.component.js')}" />
+		</head>
+		<body class="slds-scope" ng-app="campsites">
+			<c:CampsitesProvider />
+			<campsite-list></campsite-list>
+		</body>
+	</html>
+</apex:page>
+
+

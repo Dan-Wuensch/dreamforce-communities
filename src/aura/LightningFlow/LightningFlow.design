@@ -1,0 +1,4 @@
+<design:component >
+	<design:attribute name="flowName" label="Flow Name" />
+	<design:attribute name="contextObjectId" label="Context Object ID" />
+</design:component>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Stores information related to a Reservation originated through the system.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>Application__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Relates the reservation to the application that originated it.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select the Application (if any) that led to the origination of this reservation.</inlineHelpText>
+        <label>Application</label>
+        <referenceTo>Application__c</referenceTo>
+        <relationshipLabel>Reservations</relationshipLabel>
+        <relationshipName>Reservations</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Arrival_Date__c</fullName>
+        <description>Stores the date at which a camper plans to check in to the Campsite.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the date at which the camper will arrive at the Campsite.</inlineHelpText>
+        <label>Arrival Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Camper__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Associates the Individual making the reservation.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select the Account representing the primary Individual on the reservation.</inlineHelpText>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Reservations</relationshipLabel>
+        <relationshipName>Reservations</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Campsite__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Campsite selected for this reservation.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select the campsite to associate with this reservation.</inlineHelpText>
+        <label>Campsite</label>
+        <referenceTo>Campsite__c</referenceTo>
+        <relationshipLabel>Reservations</relationshipLabel>
+        <relationshipName>Reservations</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Departure_Date__c</fullName>
+        <description>Stores the date at which a camper will leave the Campsite.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the check-out date for the camper.</inlineHelpText>
+        <label>Departure Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <description>Descriptive text containing notes added to the reservation.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter details for any special requests or notes related to the reservation.</inlineHelpText>
+        <label>Description</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Number_of_Campers__c</fullName>
+        <description>Stores the number of campers that will occupy a campsite during a given reservation</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the number of campers that plan to stay at the campsite during this reservation.</inlineHelpText>
+        <label>Number of Campers</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Reservation</label>
+    <nameField>
+        <label>Reservation Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Reservations</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>Private</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,31 @@
+<apex:component controller="CampsiteController">
+	<script type="text/javascript">
+		(function() {
+			'use strict';
+			angular.module('campsites')
+				.config(function(visualforceProvider) {
+					visualforceProvider.set({
+						labels: {
+							Campsite: '{!JSENCODE($Label.Campsite)}',
+							Campsite_Primary_Action: '{!JSENCODE($Label.Campsite_Primary_Action)}'
+						},
+						views: {
+							campsiteListView: '{!URLFOR($Resource.Campsites, '/views/campsiteList.view.html')}'
+						},
+						icons: {
+							campsite: '{!URLFOR($Asset.SLDS, '/assets/icons/custom-sprite/svg/symbols.svg#custom50')}'
+						},
+						remoteActions: {
+							retrieveCampsites: function(callback) {
+								Visualforce.remoting.Manager.invokeAction(
+									'{!$RemoteAction.CampsiteController.retrieveCampsites}',
+									callback,
+									{escape: false, buffer: false}
+								);
+							}
+						}
+					});
+				});
+		})();
+	</script>
+</apex:component>
