@@ -2,8 +2,11 @@
  * A data transfer object to communicate Campsite information between client and server.
  */
 public with sharing class Campsite {
+	@TestVisible
 	private Id sid;
+	@TestVisible
 	private String name;
+	@TestVisible
 	private String description;
 
 	public Campsite(Campsite__c record) {
